@@ -80,3 +80,20 @@
 .buttons-container a.give-classes:hover {
   background-color: var(--color-secondary-dark);
 }
+
+.total-connections {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1.6rem;
+
+  margin-top: 1.8rem;
+  text-align: center;
+}
+
+.total-connections span {
+  font-size: 1.8rem;
+  font-family: "Poppins";
+  font-weight: 400;
+  line-height: 20px;
+}
