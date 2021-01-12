@@ -21,6 +21,120 @@
     <title>Proffy | Sua plataforma de estudos online</title>
   </head>
   <body id="page-study">
-    <div id="container"></div>
+    <div id="container">
+      <header class="page-header">
+        <div class="top-bar-container">
+          <a href="/">
+            <img
+              src="/public/images/icons/back.svg"
+              alt="Voltar para pagina inicial"
+            />
+          </a>
+
+          <img src="/public/images/logo.svg" alt="Logo Proffy" />
+        </div>
+
+        <div class="header-content">
+          <strong>Estes são os proffys disponíveis.</strong>
+
+          <form id="search-teachers">
+            <div class="select-block">
+              <label for="subject">Materia</label>
+              <select name="subject" id="subject">
+                <option value="" disabled hidden="">Selecione uma opção</option>
+                <option value="1">Artes</option>
+                <option value="2">Biologia</option>
+                <option value="3">Ciências</option>
+                <option value="4">Educação física</option>
+                <option value="5">Física</option>
+                <option value="6">Geografia</option>
+                <option value="7">História</option>
+                <option value="8">Matemática</option>
+                <option value="9">Português</option>
+                <option value="10">Química</option>
+              </select>
+            </div>
+            <div class="select-block">
+              <label for="weekday">Dia da semana</label>
+              <select name="weekday" id="weekday">
+                <option value="" disabled hidden="">Selecione uma opção</option>
+                <option value="1">Domingo</option>
+                <option value="2">Segunda</option>
+                <option value="3">Terça</option>
+                <option value="4">Quarta</option>
+                <option value="5">Quinta</option>
+                <option value="6">Sexta</option>
+                <option value="6">Sábado</option>
+              </select>
+            </div>
+            <div class="input-block">
+              <label for="time">Hora (De 0 até 24)</label>
+              <input type="time" id="time" name="time" min="0" max="24" />
+            </div>
+            <button type="submit">Filtrar</button>
+          </form>
+        </div>
+      </header>
+
+      <main>
+        <article class="teacher-item">
+          <header>
+            <img
+              src="https://github.com/Hugovarellaa.png"
+              alt="Foto do usuário"
+            />
+            <div>
+              <strong>Hugo Alves Varella</strong>
+              <span>Química</span>
+            </div>
+          </header>
+          <p>
+            Entusiasta das melhores tecnologias de química avançada. Apaixonado
+            por explodir coisas em laboratório e por mudar a vida das pessoas
+            através de experiências. Mais de 200.000 pessoas já passaram por uma
+            das minhas explosões.
+          </p>
+          <footer>
+            <p>
+              <span> Preço/Hora</span>
+              <strong>R$ 20,00</strong>
+            </p>
+            <button type="button">
+              <img src="/public/images/icons/whatsapp.svg" alt="" />
+              <span>Entrar em contato</span>
+            </button>
+          </footer>
+        </article>
+
+        <article class="teacher-item">
+          <header>
+            <img
+              src="https://github.com/Hugovarellaa.png"
+              alt="Foto do usuário"
+            />
+            <div>
+              <strong>Hugo Alves Varella</strong>
+              <span>Química</span>
+            </div>
+          </header>
+          <p>
+            Entusiasta das melhores tecnologias de química avançada. Apaixonado
+            por explodir coisas em laboratório e por mudar a vida das pessoas
+            através de experiências. Mais de 200.000 pessoas já passaram por uma
+            das minhas explosões.
+          </p>
+          <footer>
+            <p>
+              <span> Preço/Hora</span>
+              <strong>R$ 20,00</strong>
+            </p>
+            <button type="button">
+              <img src="/public/images/icons/whatsapp.svg" alt="" />
+              <span>Entrar em contato</span>
+            </button>
+          </footer>
+        </article>
+      </main>
+    </div>
   </body>
 </html>
