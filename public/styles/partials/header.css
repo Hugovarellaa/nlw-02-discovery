@@ -1,8 +1,3 @@
-#page-study #container {
-  width: 100vw;
-  height: 100vh;
-}
-
 .page-header {
   background-color: var(--color-primary);
 
@@ -21,7 +16,7 @@
   justify-content: space-between;
 }
 
-.page-header .top-bar-container img {
+.page-header .top-bar-container > img {
   height: 1.6rem;
 }
 
@@ -47,6 +42,14 @@
   font-family: "Archivo";
   font-weight: 700;
   line-height: 4.2rem;
+}
+
+.page-header .header-content p {
+  max-width: 30rem;
+  font-size: 1.6rem;
+  line-height: 2.6rem;
+  color: var(--color-text-in-primary);
+  margin-top: 2.4rem;
 }
 
 @media (min-width: 700px) {
