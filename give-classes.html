@@ -101,7 +101,64 @@
               <input type="number" id="cost" name="cost" required />
             </div>
           </fieldset>
+
+          <fieldset>
+            <legend>
+              <span> Horários disponíveis </span>
+              <button id="add-time">+ Novo horário</button>
+            </legend>
+
+            <div class="schedule-item">
+              <div class="select-block">
+                <label for="weekday">Dia da semana</label>
+                <!--
+                  Quando vamos enviar + de 1 informação,
+                  Colocamos o ( Array [])  junto ao campo name
+                 -->
+                <select name="weekday[]" required>
+                  <option value="" disabled hidden="">
+                    Selecione uma opção
+                  </option>
+                  <option value="1">Domingo</option>
+                  <option value="2">Segunda</option>
+                  <option value="3">Terça</option>
+                  <option value="4">Quarta</option>
+                  <option value="5">Quinta</option>
+                  <option value="6">Sexta</option>
+                  <option value="6">Sábado</option>
+                </select>
+              </div>
+              <div class="input-block">
+                <label for="time_from">Das</label>
+                <input type="time" name="time_from[]" required />
+              </div>
+
+              <div class="input-block">
+                <label for="time_to">Até</label>
+                <input type="time" name="time_to[]" required />
+              </div>
+            </div>
+          </fieldset>
         </form>
+
+        <footer>
+          <p>
+            <img
+              src="/public/images/icons/warning.svg"
+              alt="Aviso importante"
+            />
+            <span>
+              Importante!! <br />
+              preencha todos os dados
+            </span>
+          </p>
+
+          <!--
+              Quando o botão do formulário esta fora dele,
+              Colocamos a propriedade ( form ) com id do formulário
+          -->
+          <button type="submit" form="create-classes">Salvar cadastro</button>
+        </footer>
       </main>
     </div>
   </body>
