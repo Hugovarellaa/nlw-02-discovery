@@ -41,12 +41,27 @@ const proffys = [
   },
 ];
 
+const subjects = [
+  "Artes",
+  "Biologia",
+  "Ciências",
+  "física",
+  "Física",
+  "Geografia",
+  "História",
+  "Matemática",
+  "Português",
+  "Química",
+];
+
 function homePage(request, response) {
   return response.render("index.html");
 }
 
 function studyPage(request, response) {
-  return response.render("study.html", { proffys });
+  const filters = request.query;
+
+  return response.render("study.html", { proffys, filters, subjects });
 }
 function giveClassesPage(request, response) {
   return response.render("give-classes.html");
