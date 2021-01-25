@@ -1,9 +1,16 @@
 const express = require("express");
+const nunjucks = require("nunjucks");
 
 const app = express();
 
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
+app.set("view engine", "nunjucks");
+
+nunjucks.configure("src/views", {
+  express: app,
+  noCache: true,
+});
 
 const proffys = [
   {
@@ -34,16 +41,19 @@ const proffys = [
   },
 ];
 
-app.get("/", (req, res) => {
-  return res.sendFile(__dirname + "/views/index.html");
-});
+function homePage(request, response) {
+  return response.render("index.html");
+}
 
-app.get("/study", (req, res) => {
-  return res.sendFile(__dirname + "/views/study.html");
-});
+function studyPage(request, response) {
+  return response.render("study.html", { proffys });
+}
+function giveClassesPage(request, response) {
+  return response.render("give-classes.html");
+}
 
-app.get("/give-classes", (req, res) => {
-  return res.sendFile(__dirname + "/views/give-classes.html");
-});
+app.get("/", homePage);
+app.get("/study", studyPage);
+app.get("/give-classes", giveClassesPage);
 
 app.listen(3333, () => console.log("🚀🚀 Server running... 🚀🚀"));

@@ -79,63 +79,34 @@
       </header>
 
       <main>
-        <article class="teacher-item">
-          <header>
-            <img
-              src="https://github.com/Hugovarellaa.png"
-              alt="Foto do usuário"
-            />
-            <div>
-              <strong>Hugo Alves Varella</strong>
-              <span>Química</span>
-            </div>
-          </header>
-          <p>
-            Entusiasta das melhores tecnologias de química avançada. Apaixonado
-            por explodir coisas em laboratório e por mudar a vida das pessoas
-            através de experiências. Mais de 200.000 pessoas já passaram por uma
-            das minhas explosões.
-          </p>
-          <footer>
-            <p>
-              <span> Preço/Hora</span>
-              <strong>R$ 20,00</strong>
-            </p>
-            <button type="button">
-              <img src="/images/icons/whatsapp.svg" alt="" />
-              <span>Entrar em contato</span>
-            </button>
-          </footer>
-        </article>
+        {% for proffy in proffys %}
 
         <article class="teacher-item">
           <header>
-            <img
-              src="https://github.com/Hugovarellaa.png"
-              alt="Foto do usuário"
-            />
+            <img src="{{proffy.avatar}}" alt="Foto do usuário" />
             <div>
-              <strong>Hugo Alves Varella</strong>
-              <span>Química</span>
+              <strong>{{proffy.name}}</strong>
+              <span>{{proffy.subject}}</span>
             </div>
           </header>
-          <p>
-            Entusiasta das melhores tecnologias de química avançada. Apaixonado
-            por explodir coisas em laboratório e por mudar a vida das pessoas
-            através de experiências. Mais de 200.000 pessoas já passaram por uma
-            das minhas explosões.
-          </p>
+          <p>{{proffy.bio}}</p>
           <footer>
             <p>
               <span> Preço/Hora</span>
-              <strong>R$ 20,00</strong>
+              <strong>R$ {{proffy.cost}}</strong>
             </p>
-            <button type="button">
-              <img src="/images/icons/whatsapp.svg" alt="" />
+            <a
+              href="https://api.whatsapp.com/send?1=pt_BR&phone=55{{proffy.whatsapp}}&text=Tenho interesse na sua aula de {{proffy.subject}} {{proffy.name}}"
+              class="button"
+              target="_blank"
+            >
+              <img src="/images//icons/whatsapp.svg" alt="whatsapp" />
               <span>Entrar em contato</span>
-            </button>
+            </a>
           </footer>
         </article>
+
+        {% endfor %}
       </main>
     </div>
   </body>
