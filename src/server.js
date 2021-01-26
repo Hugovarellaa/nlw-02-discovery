@@ -54,6 +54,16 @@ const subjects = [
   "Química",
 ];
 
+const weekdays = [
+  "Domingo",
+  "Segunda",
+  "Terça",
+  "Quarta",
+  "Quinta",
+  "Sexta",
+  "Sábado",
+];
+
 function homePage(request, response) {
   return response.render("index.html");
 }
@@ -61,7 +71,12 @@ function homePage(request, response) {
 function studyPage(request, response) {
   const filters = request.query;
 
-  return response.render("study.html", { proffys, filters, subjects });
+  return response.render("study.html", {
+    proffys,
+    filters,
+    subjects,
+    weekdays,
+  });
 }
 function giveClassesPage(request, response) {
   return response.render("give-classes.html");
