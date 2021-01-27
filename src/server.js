@@ -78,6 +78,7 @@ function studyPage(request, response) {
     weekdays,
   });
 }
+
 function giveClassesPage(request, response) {
   return response.render("give-classes.html");
 }
