@@ -82,6 +82,16 @@ function studyPage(request, response) {
 function giveClassesPage(request, response) {
   const data = request.query;
 
+  const isNotEmpty = Object.keys(data).length > 0;
+
+  console.log(isNotEmpty);
+
+  if (isNotEmpty) {
+    proffys.push(data);
+
+    return response.redirect("/study");
+  }
+
   return response.render("give-classes.html", { subjects, weekdays });
 }
 
