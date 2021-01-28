@@ -80,7 +80,9 @@ function studyPage(request, response) {
 }
 
 function giveClassesPage(request, response) {
-  return response.render("give-classes.html");
+  const data = request.query;
+
+  return response.render("give-classes.html", { subjects, weekdays });
 }
 
 app.get("/", homePage);

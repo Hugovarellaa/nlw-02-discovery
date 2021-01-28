@@ -78,16 +78,12 @@
               <label for="subject">Materia</label>
               <select name="subject" id="subject" required>
                 <option value="">Selecione uma opção</option>
-                <option value="0">Artes</option>
-                <option value="1">Biologia</option>
-                <option value="2">Ciências</option>
-                <option value="3">Educação física</option>
-                <option value="4">Física</option>
-                <option value="5">Geografia</option>
-                <option value="6">História</option>
-                <option value="7">Matemática</option>
-                <option value="8">Português</option>
-                <option value="9">Química</option>
+
+                {% for subject in subjects %}
+
+                <option value="{{loop.index}}">{{subject}}</option>
+
+                {% endfor %}
               </select>
             </div>
             <div class="input-block">
@@ -113,16 +109,13 @@
                   Colocamos o ( Array [])  junto ao campo name
                  -->
                 <select name="weekday[]" required>
-                  <option value="" disabled hidden="">
-                    Selecione uma opção
-                  </option>
-                  <option value="0">Domingo</option>
-                  <option value="1">Segunda</option>
-                  <option value="2">Terça</option>
-                  <option value="3">Quarta</option>
-                  <option value="4">Quinta</option>
-                  <option value="5">Sexta</option>
-                  <option value="6">Sábado</option>
+                  <option value="">Selecione uma opção</option>
+
+                  {% for weekday in weekdays %}
+
+                  <option value="{{loop.index0}}">{{weekday}}</option>
+
+                  {% endfor %}
                 </select>
               </div>
               <div class="input-block">
