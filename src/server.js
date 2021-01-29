@@ -64,6 +64,11 @@ const weekdays = [
   "Sábado",
 ];
 
+function getSubject(subjectNumber) {
+  const position = Number(subjectNumber) - 1;
+  return subjects[position];
+}
+
 function homePage(request, response) {
   return response.render("index.html");
 }
@@ -84,7 +89,7 @@ function giveClassesPage(request, response) {
 
   const isNotEmpty = Object.keys(data).length > 0;
 
-  console.log(isNotEmpty);
+  data.subject = getSubject(data.subject);
 
   if (isNotEmpty) {
     proffys.push(data);
