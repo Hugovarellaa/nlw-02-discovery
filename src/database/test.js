@@ -1,7 +1,9 @@
 const database = require("./index");
 
+const createProffy = require("./createProffy");
+
 database.then((db) => {
-  proffy = {
+  proffyValue = {
     name: "Hugo Alves Varella",
     avatar: "https://github.com/Hugovarellaa.png",
     whatsapp: 61995995970,
@@ -17,7 +19,8 @@ database.then((db) => {
     // Proffy_id vai vim pelo Database
   };
 
-  classSchedule = [
+  classScheduleValue = [
+    // class_id virá pelo banco de dados, apos cadastramos a classe
     {
       weekday: 0,
       time_from: 722,
@@ -30,4 +33,10 @@ database.then((db) => {
       time_to: 1302,
     },
   ];
+
+  createProffy(db, {
+    proffyValue,
+    classValue,
+    classScheduleValue,
+  });
 });
