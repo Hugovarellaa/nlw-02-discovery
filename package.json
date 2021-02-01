@@ -2,7 +2,7 @@
   "name": "nlw-02-discovery",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
+  "type": "commonjs",
   "main": "index.js",
   "scripts": {
     "dev": "nodemon src/server.js"
@@ -13,7 +13,7 @@
   "dependencies": {
     "express": "^4.18.2",
     "nunjucks": "^3.2.4",
-    "sqlite-async": "^1.2.0"
+    "sqlite-async": "^1.1.0"
   },
   "devDependencies": {
     "nodemon": "^2.0.22"
