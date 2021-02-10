@@ -1,16 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Cascade Styles Stylesheet -->
+    <link rel="stylesheet" href="./public/styles/main.css" />
+    <link rel="stylesheet" href="./public/styles/home-page.css" />
+
+    <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
+
     <title>Proffy | Sua plataforma de estudos online</title>
   </head>
-  <body>
-    <div>
-      <h1>Proffy</h1>
-      <img src="./public/images/landing.svg" alt="" />
-      <button>Estudar</button>
-      <button>Dar aulas</button>
+  <body id="home-page">
+    <div id="container">
+      <div class="logo">
+        <img src="./public/images/logo.svg" alt="Proffy" />
+        <h2>Sua plataforma e estudos online</h2>
+      </div>
+
+      <img
+        class="hero-image"
+        src="./public/images/landing.svg"
+        alt="Plataforma de Estudos"
+      />
+
+      <div class="buttons-container">
+        <a class="study" href="/study">
+          <img src="./public/images/icons/study.svg" alt="Estudar" />
+          Estudar
+        </a>
+
+        <a class="give-classes" href="/give-classes">
+          <img src="./public/images/icons/give-classes.svg" alt="Dar aulas" />
+          Dar aulas
+        </a>
+      </div>
+
+      <p class="total-connections">
+        Total de 200 conexões já realizadas
+        <img src="./public/images/icons/purple-heart.svg" alt="Coração roxo" />
+      </p>
     </div>
   </body>
 </html>
