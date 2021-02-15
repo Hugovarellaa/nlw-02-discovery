@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Cascade Styles Stylesheet -->
+    <link rel="stylesheet" href="./public/styles/main.css" />
+    <link rel="stylesheet" href="./public/styles/partials/study-page.css" />
+
+    <!-- Fonts -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;700&amp;family=Poppins:wght@400;600&amp;display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Proffy | Sua plataforma de estudos online</title>
+  </head>
+  <body id="study-page">
+    <div id="container">
+      <header class="page-header">
+        <div class="top-bar-container">
+          <a href="/">
+            <img src="./public/images/icons/back.svg" alt="" />
+          </a>
+          <img src="/public/images/logo.svg" alt="Proffy logo" />
+        </div>
+
+        <div class="header-content">
+          <strong>Estes são os proffys disponíveis.</strong>
+
+          <form id="search-teachers">
+            <div class="select-block">
+              <label for="subject">Matéria</label>
+              <select name="subject" id="subject">
+                <option value="" disabled="" hidden="">
+                  Selecione uma opção
+                </option>
+                <option value="1">Química</option>
+                <option value="2">Artes</option>
+                <option value="3">Biologia</option>
+                <option value="4">Ciências</option>
+                <option value="5">Educação física</option>
+                <option value="6">Física</option>
+                <option value="7">Geografia</option>
+                <option value="8">Historia</option>
+                <option value="9">Matemática</option>
+                <option value="10">Português</option>
+              </select>
+            </div>
+          </form>
+        </div>
+      </header>
+    </div>
+  </body>
+</html>
