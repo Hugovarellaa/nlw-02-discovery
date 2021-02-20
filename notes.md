@@ -2,7 +2,7 @@
 
 # Aula 02 OK
 
-# Aula 03
+# Aula 03 # 57min
 
 # Aula 04
 

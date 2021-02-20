@@ -137,7 +137,7 @@
   .schedule-item {
     display: grid;
     grid-template-columns: 2fr 1fr 1fr;
-    column-gap: 1.6rem;
+    gap: 1.6rem;
   }
 
   #give-classes-page #schedule-items .select-block + .input-block,
