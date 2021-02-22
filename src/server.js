@@ -5,6 +5,7 @@ const app = express();
 
 // Config styles in folder public
 app.use(express.static("public"));
+// app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Config Nunjucks
@@ -59,10 +60,14 @@ const proffys = [
 ];
 
 app.get("/", (req, res) => {
+  console.log(data);
+
   return res.render("index.html");
 });
 
 app.get("/study", (req, res) => {
+  const data = req.query;
+  console.log(data);
   return res.render("study.html", { proffys });
 });
 
