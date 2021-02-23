@@ -59,16 +59,37 @@ const proffys = [
   },
 ];
 
-app.get("/", (req, res) => {
-  console.log(data);
+const subjects = [
+  "Química",
+  "Artes",
+  "Biologia",
+  "Ciências",
+  "Educação",
+  "Física",
+  "Geografia",
+  "Historia",
+  "Matemática",
+  "Português",
+];
 
+const weekdays = [
+  "Segunda",
+  "Terça",
+  "Quarta",
+  "Quinta",
+  "Sexta",
+  "Sábado",
+  "Domingo",
+];
+
+app.get("/", (req, res) => {
   return res.render("index.html");
 });
 
 app.get("/study", (req, res) => {
-  const data = req.query;
-  console.log(data);
-  return res.render("study.html", { proffys });
+  const filters = req.query;
+
+  return res.render("study.html", { proffys, filters, subjects, weekdays });
 });
 
 app.get("/give-classes", (req, res) => {

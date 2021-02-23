@@ -2,8 +2,8 @@
 
 # Aula 02 OK
 
-# Aula 03 # 57min
+# Aula 03
 
-# Aula 04
+# Aula 04 # 01:33:00
 
 # Aula 05
