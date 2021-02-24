@@ -47,15 +47,15 @@
             <legend>Seus dados</legend>
             <div class="input-block">
               <label for="name">Nome Completo</label>
-              <input type="text" id="name" required />
+              <input type="text" id="name" required name="name" />
             </div>
 
             <div class="input-block">
-              <label for="avatar">
+              <label for="avatar_url">
                 Link da foto
                 <small>(Comece com https://)</small>
               </label>
-              <input type="url" id="avatar" required />
+              <input id="avatar_url" type="url" required name="avatar_url" />
             </div>
 
             <div class="input-block">
@@ -63,7 +63,7 @@
                 >Whatsapp
                 <small>(Somente números)</small>
               </label>
-              <input type="number" id="whatsapp" required />
+              <input type="number" id="whatsapp" required name="whatsapp" />
             </div>
 
             <div class="textarea-block">
@@ -79,16 +79,10 @@
               <select name="subject" id="subject" required>
                 <option value="" hidden>Selecione uma opção</option>
 
-                <option value="1">Química</option>
-                <option value="2">Artes</option>
-                <option value="3">Biologia</option>
-                <option value="4">Ciências</option>
-                <option value="5">Educação física</option>
-                <option value="6">Física</option>
-                <option value="7">Geografia</option>
-                <option value="8">Historia</option>
-                <option value="9">Matemática</option>
-                <option value="10">Português</option>
+                {%for subject in subjects %}
+                <!-- Toda vez que o nunjucks faz um for ele disponibiliza um index na variável loop.index -->
+                <option value="{{loop.index}}">{{subject}}</option>
+                {%endfor %}
               </select>
             </div>
 
@@ -113,13 +107,10 @@
                 <select name="weekday[]" id="weekday" required>
                   <option value="" hidden>Selecione uma opção</option>
 
-                  <option value="1">Segunda</option>
-                  <option value="2">Terça</option>
-                  <option value="3">Quarta</option>
-                  <option value="4">Quinta</option>
-                  <option value="5">Sexta</option>
-                  <option value="6">Sábado</option>
-                  <option value="7">Domingo</option>
+                  {%for weekday in weekdays %}
+                  <!-- Toda vez que o nunjucks faz um for ele disponibiliza um index na variável loop.index -->
+                  <option value="{{loop.index0}}">{{weekday}}</option>
+                  {%endfor %}
                 </select>
               </div>
 
