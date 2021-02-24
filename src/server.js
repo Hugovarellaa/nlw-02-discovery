@@ -82,6 +82,10 @@ const weekdays = [
   "Domingo",
 ];
 
+function getSubject(subjectNumber) {
+  return subjects[Number(subjectNumber) - 1];
+}
+
 app.get("/", (req, res) => {
   return res.render("index.html");
 });
@@ -93,7 +97,18 @@ app.get("/study", (req, res) => {
 });
 
 app.get("/give-classes", (req, res) => {
-  return res.render("give-classes.html");
+  const data = req.query;
+
+  const isNoEmpty = Object.keys(data).length > 0;
+  if (isNoEmpty) {
+    data.subject = getSubject(data.subject);
+
+    proffys.push(data);
+
+    return res.redirect("/study");
+  }
+
+  return res.render("give-classes.html", { weekdays, subjects });
 });
 
 app.listen(8080, () =>
