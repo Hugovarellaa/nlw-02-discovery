@@ -4,6 +4,6 @@
 
 # Aula 03
 
-# Aula 04 # 01:33:00
+# Aula 04
 
-# Aula 05
+# Aula 05 # 23min
