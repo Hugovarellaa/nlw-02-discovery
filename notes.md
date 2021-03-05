@@ -6,4 +6,6 @@
 
 # Aula 04
 
-# Aula 05 # 23min
+# Aula 05
+
+- Ficou faltando Termina a Aula 05, Aula desatualizada procurarei outra maneira de incrementar um banco de dados
