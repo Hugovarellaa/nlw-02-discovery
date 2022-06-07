@@ -1,0 +1,12 @@
+{
+  "openapi": "3.0.1",
+  "info": {
+    "title": "RentaLX Documentation",
+    "description": "RentalX API Documentation",
+    "version": "1.0.0",
+    "contact": {
+      "name": "Hugo Varella",
+      "email": "hugovarellaa@gmail.com"
+    }
+  }
+}
