@@ -6,7 +6,7 @@
   "author": "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 <hugovarellaa@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev . --transpile-only --ignore-watch node_modules --respawn"
+    "dev": "ts-node-dev --inspect --transpile-only --ignore-watch node_modules --respawn ."
   },
   "dependencies": {
     "@typescript-eslint/eslint-plugin": "^5.32.0",
