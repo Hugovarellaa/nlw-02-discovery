@@ -1,9 +1,9 @@
 import { Router } from "express";
-import { v4 as uuidV4 } from "uuid";
+import { Category } from "../model/Category";
 
 const categoriesRoutes = Router();
 
-const categories = [];
+const categories: Category[] = [];
 
 categoriesRoutes.post("/", (request, response) => {
   const { name, description } = request.body;
@@ -16,12 +16,8 @@ categoriesRoutes.post("/", (request, response) => {
     return response.status(400).json({ error: "Category already exists!" });
   }
 
-  const category = {
-    id: uuidV4(),
-    creted_at: new Date(),
-    name,
-    description,
-  };
+  const category = new Category();
+  Object.assign(category, { name, description, created_at: new Date() });
 
   categories.push(category);
 
